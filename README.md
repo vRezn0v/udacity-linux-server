@@ -13,7 +13,7 @@ SSH Port:
 The Catalog Web App can be accessed from ```http://15.206.129.232/catalog/```
 
 ### Installation Summary:
-An Amazon LightSail Instance was created and the ssh keys were acquired for first time access. A new user was created for user ```grader``` with ability to sudo and a home directory. Fresh SSH keys were generated for grader and local timezone was set to UTC.
+An Amazon LightSail Instance was created and allocated a static IP from AWS dashboard, the ssh keys were acquired for first time access. A new user was created for user ```grader``` with ability to sudo and a home directory. Fresh SSH keys were generated for grader and local timezone was set to UTC.
 #### Software (packages) Installed:
 - Apache2
 - python-setuptools
