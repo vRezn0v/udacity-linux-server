@@ -17,6 +17,8 @@ The Catalog Web App can be accessed from ```http://15.206.129.232/catalog/```
 
 ### Installation Summary:
 An Amazon LightSail Instance was created and allocated a static IP from AWS dashboard, the ssh keys were acquired for first time access. A new user was created for user ```grader``` with ability to sudo and a home directory. Fresh SSH keys were generated for grader and local timezone was set to UTC.
+##### Update:
+The user grader has been modified to allow use of sudo without password.
 #### Software (packages) Installed:
 - Apache2
 - python-setuptools
@@ -32,7 +34,6 @@ An Amazon LightSail Instance was created and allocated a static IP from AWS dash
 - Postgresql was configured with a new username ```fosscatalog``` and respective database was created to be used with Catalog App. And remote connections were verified to be disabled.
 - The Catalog App repository was cloned into ```/var/www```, the main file ```catalog.py``` renamed to ```__init__.py``` and every instance of ```sqlite://catalog.db``` was replaced with ```postgresql://fosscatalog:password@localhost/fosscatalog``` to use postgresql server instead of a sqlite database.
 - ```FlaskApp.conf``` was generated for catalog app and the app was enabled for use with Apache using ```a2ensite```. and Web Service Gateway Interface (WSGI) configured  for FlaskApp (Catalog).
-
 ### Resources:
 - [DigitalOcean Tutorial on hosting Flask App on Apache](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps)
 - [Using Postgresql with SQLAlchemy](https://www.compose.com/articles/using-postgresql-through-sqlalchemy/)
